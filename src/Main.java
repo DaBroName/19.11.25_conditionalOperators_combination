@@ -23,9 +23,9 @@ public class Main {
 
         System.out.println("Задача 3");
         int year = 1584;
-        if ((year < 1584) || (year >= 1584 && year / 100 == 0)) {
+        if (year < 1584) {
             System.out.println(year + " год не является високосным");
-        } else if ((year >= 1584 && year % 4 == 0) || (year >= 1584 && year % 400 == 0)) {
+        } else if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
@@ -45,13 +45,6 @@ public class Main {
         }
 
         System.out.println("Задача 5");
-        /*
-        Напишите программу, которая определяет по номеру месяца в году, к какому сезону этот месяц принадлежит.
-        Например, 1-й месяц (он же январь) принадлежит к сезону зима.
-        Для написания программы используйте оператор switch. Для обозначения номера месяца используйте переменную
-        monthNumber = 12.
-        Пропишите условие, при котором программа не будет выполняться (номер месяца больше 12).
-         */
         int monthNumber = 12;
         switch (monthNumber) {
             case 12:
@@ -77,6 +70,7 @@ public class Main {
             default:
                 System.out.println("Такого месяца не существует");
                 break;
+
         }
     }
 }
